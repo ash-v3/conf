@@ -5,8 +5,10 @@ sudo pacman -Syu
 sudo pacman -S sudo openssh git
 
 sudo pacman -S base-devel go
-sudo mkdir /tmp/aur
-cd /tmp/aur
+sudo mkdir ~/.tmp
+sudo chmod +rwx ~/.tmp
+sudo chown sn4k3 ~/.tmp
+cd ~/.tmp
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -14,7 +16,7 @@ makepkg
 sudo pacman -U *
 
 # install packages
-yay -Syyuu vicious ttf-jetbrains-mono bottom alsa alsa-utils base brave-bin feh kitty neovim visual-studio-code-bin github-cli ranger neofetch gnuplot wttr fish dmenu chromium ag fasd htop colordiff feh ncdu pydf dtrx wine-ge-custom discord steam arandr atop dkms gimp macchanger reflector unrar zoxide tor nyx calibre rustup nftables popsicle
+yay -Syyuu vicious ttf-jetbrains-mono bottom alsa alsa-utils base brave-bin feh kitty neovim visual-studio-code-bin github-cli ranger neofetch gnuplot wttr fish dmenu chromium fasd htop colordiff feh ncdu pydf dtrx wine-ge-custom discord steam arandr atop dkms gimp macchanger reflector unrar zoxide tor nyx calibre rustup nftables popsicle python-pip
 
 sudo systemctl enable tor.service
 
