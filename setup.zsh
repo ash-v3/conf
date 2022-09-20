@@ -1,9 +1,6 @@
 sudo systemctl enable dhcpcd
 sudo systemctl start dhcpcd
 
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup
-sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist-backup > /etc/pacman.d/mirrorlist
-
 sudo pacman -Syu
 sudo pacman -S sudo openssh git
 
