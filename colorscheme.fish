@@ -1,3 +1,12 @@
+set -U black 000000
+set -U red ff0000
+set -U green 00ff00
+set -U yellow ffff00
+set -U blue 0000ff
+set -U magenta ff00ff
+set -U cyan 00ffff
+set -U white ffffff
+
 set -U fish_color_normal white # default color
 set -U fish_color_command cyan --italics --bold # commands like echo
 set -U fish_color_keyword green --bold # keywords like if - this falls back on the command color if unset
@@ -5,8 +14,8 @@ set -U fish_color_quote yellow --italics # quoted text like "abc"
 set -U fish_color_redirection green --underline # IO redirections like >/dev/null
 set -U fish_color_end red --bold # process separators like ; and &
 set -U fish_color_error red --bold # syntax errors
-set -U fish_color_param magenta # ordinary command parameters
-set -U fish_color_valid_path 00ff7f --underline # parameters that are filenames (if the file exists)
+set -U fish_color_param yellow # ordinary command parameters
+set -U fish_color_valid_path green --underline # parameters that are filenames (if the file exists)
 set -U fish_color_option green --bold # options starting with “-”, up to the first “--” parameter
 set -U fish_color_comment white --italics #007fff # comments like ‘# important’
 set -U fish_color_operator green --bold # parameter expansion operators like * and ~
