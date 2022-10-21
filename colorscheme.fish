@@ -14,7 +14,7 @@ set -U fish_color_quote yellow --italics # quoted text like "abc"
 set -U fish_color_redirection green --underline # IO redirections like >/dev/null
 set -U fish_color_end red --bold # process separators like ; and &
 set -U fish_color_error red --bold # syntax errors
-set -U fish_color_param yellow # ordinary command parameters
+set -U fish_color_param green # ordinary command parameters
 set -U fish_color_valid_path green --underline # parameters that are filenames (if the file exists)
 set -U fish_color_option green --bold # options starting with “-”, up to the first “--” parameter
 set -U fish_color_comment white --italics #007fff # comments like ‘# important’
