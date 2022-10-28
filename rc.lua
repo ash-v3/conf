@@ -212,7 +212,8 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
-            mytextclock,
+            require("battery-widget") {},
+	    mytextclock,
             s.mylayoutbox,
         },
     }
@@ -584,4 +585,8 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+awful.spawn.with_shell("picom")
+
+-- awful.spawn.with_shell("sh /.config/awesome/autorun.sh)
 -- }}}
