@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "dracula"
 [editor]
 cursorline = true
 color-modes = true
