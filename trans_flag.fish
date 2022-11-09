@@ -1,4 +1,4 @@
-function fish_greeting
+function trans_flag
 	set -l c_1 00ffff
 	set -l c_2 ff1493
 	set -l c_3 ffffff
