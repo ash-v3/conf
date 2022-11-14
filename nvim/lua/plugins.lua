@@ -59,21 +59,17 @@ packer.startup {
     use { "hrsh7th/cmp-buffer", after = "nvim-cmp" }
     use { "hrsh7th/cmp-omni", after = "nvim-cmp" }
     use { "quangnguyen30192/cmp-nvim-ultisnips", after = { "nvim-cmp", "ultisnips" } }
-    if vim.g.is_mac then
-      use { "hrsh7th/cmp-emoji", after = "nvim-cmp" }
-    end
+    use { "hrsh7th/cmp-emoji", after = "nvim-cmp" }
 
     -- nvim-lsp configuration (it relies on cmp-nvim-lsp, so it should be loaded after cmp-nvim-lsp).
     use { "neovim/nvim-lspconfig", after = "cmp-nvim-lsp", config = [[require('config.lsp')]] }
 
-    if vim.g.is_mac then
-      use {
+    use {
         "nvim-treesitter/nvim-treesitter",
         event = "BufEnter",
         run = ":TSUpdate",
         config = [[require('config.treesitter')]],
-      }
-    end
+    }
 
     -- Python indent (follows the PEP8 style)
     use { "Vimjas/vim-python-pep8-indent", ft = { "python" } }
@@ -262,13 +258,11 @@ packer.startup {
     use { "godlygeek/tabular", cmd = { "Tabularize" } }
 
     -- Markdown previewing (only for Mac and Windows)
-    if vim.g.is_win or vim.g.is_mac then
-      use {
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && npm install",
-        ft = { "markdown" },
-      }
-    end
+    use {
+      "iamcco/markdown-preview.nvim",
+      run = "cd app && npm install",
+      ft = { "markdown" },
+    }
 
     use { "folke/zen-mode.nvim", cmd = "ZenMode", config = [[require('config.zen-mode')]] }
 
@@ -289,7 +283,7 @@ packer.startup {
     use { "michaeljsmith/vim-indent-object", event = "VimEnter" }
 
     -- Only use these plugin on Windows and Mac and when LaTeX is installed
-    if vim.g.is_win or vim.g.is_mac and utils.executable("latex") then
+    if utils.executable("latex") then
       use { "lervag/vimtex", ft = { "tex" } }
     end
 
@@ -323,9 +317,7 @@ packer.startup {
     end
 
     -- Debugger plugin
-    if vim.g.is_win or vim.g.is_linux then
-      use { "sakhnik/nvim-gdb", run = { "bash install.sh" }, opt = true, setup = [[vim.cmd('packadd nvim-gdb')]] }
-    end
+    use { "sakhnik/nvim-gdb", run = { "bash install.sh" }, opt = true, setup = [[vim.cmd('packadd nvim-gdb')]] }
 
     -- Session management plugin
     use { "tpope/vim-obsession", cmd = "Obsession" }

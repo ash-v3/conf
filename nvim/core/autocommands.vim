@@ -110,7 +110,7 @@ function! s:handle_large_file() abort
     set norelativenumber
     setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1
   else
-    set eventignore-=all relativenumber
+    set eventignore-=all norelativenumber
   endif
 endfunction
 
