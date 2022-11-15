@@ -59,21 +59,17 @@ packer.startup {
     use { "hrsh7th/cmp-buffer", after = "nvim-cmp" }
     use { "hrsh7th/cmp-omni", after = "nvim-cmp" }
     use { "quangnguyen30192/cmp-nvim-ultisnips", after = { "nvim-cmp", "ultisnips" } }
-    if vim.g.is_mac then
-      use { "hrsh7th/cmp-emoji", after = "nvim-cmp" }
-    end
+    use { "hrsh7th/cmp-emoji", after = "nvim-cmp" }
 
     -- nvim-lsp configuration (it relies on cmp-nvim-lsp, so it should be loaded after cmp-nvim-lsp).
     use { "neovim/nvim-lspconfig", after = "cmp-nvim-lsp", config = [[require('config.lsp')]] }
 
-    if vim.g.is_mac then
-      use {
-        "nvim-treesitter/nvim-treesitter",
-        event = "BufEnter",
-        run = ":TSUpdate",
-        config = [[require('config.treesitter')]],
-      }
-    end
+    use {
+      "nvim-treesitter/nvim-treesitter",
+      event = "BufEnter",
+      run = ":TSUpdate",
+      config = [[require('config.treesitter')]],
+    }
 
     -- Python indent (follows the PEP8 style)
     use { "Vimjas/vim-python-pep8-indent", ft = { "python" } }
@@ -109,11 +105,7 @@ packer.startup {
     }
 
     -- File search, tag search and more
-    if vim.g.is_win then
-      use { "Yggdroot/LeaderF", cmd = "Leaderf" }
-    else
-      use { "Yggdroot/LeaderF", cmd = "Leaderf", run = ":LeaderfInstallCExtension" }
-    end
+    use { "Yggdroot/LeaderF", cmd = "Leaderf", run = ":LeaderfInstallCExtension" }
 
     use {
       "nvim-telescope/telescope.nvim",
@@ -198,8 +190,8 @@ packer.startup {
     -- Comment plugin
     use { "tpope/vim-commentary", event = "VimEnter" }
 
-    -- Multiple cursor plugin like Sublime Text?
-    -- use 'mg979/vim-visual-multi'
+    -- Multiple cursor plugin
+    use 'mg979/vim-visual-multi'
 
     -- Autosave files on certain events
     use { "907th/vim-auto-save", event = "InsertEnter" }
@@ -208,9 +200,7 @@ packer.startup {
     use { "simnalamburt/vim-mundo", cmd = { "MundoToggle", "MundoShow" } }
 
     -- Manage your yank history
-    if vim.g.is_win or vim.g.is_mac then
-      use { "svermeulen/vim-yoink", event = "VimEnter" }
-    end
+    use { "svermeulen/vim-yoink", event = "VimEnter" }
 
     -- Handy unix command inside Vim (Rename, Move etc.)
     use { "tpope/vim-eunuch", cmd = { "Rename", "Delete" } }
@@ -262,19 +252,15 @@ packer.startup {
     use { "godlygeek/tabular", cmd = { "Tabularize" } }
 
     -- Markdown previewing (only for Mac and Windows)
-    if vim.g.is_win or vim.g.is_mac then
-      use {
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && npm install",
-        ft = { "markdown" },
-      }
-    end
+    use {
+      "iamcco/markdown-preview.nvim",
+      run = "cd app && npm install",
+      ft = { "markdown" },
+    }
 
     use { "folke/zen-mode.nvim", cmd = "ZenMode", config = [[require('config.zen-mode')]] }
 
-    if vim.g.is_mac then
-      use { "rhysd/vim-grammarous", ft = { "markdown" } }
-    end
+    use { "rhysd/vim-grammarous", ft = { "markdown" } }
 
     use { "chrisbra/unicode.vim", event = "VimEnter" }
 
@@ -289,9 +275,7 @@ packer.startup {
     use { "michaeljsmith/vim-indent-object", event = "VimEnter" }
 
     -- Only use these plugin on Windows and Mac and when LaTeX is installed
-    if utils.executable("latex") then
-      use { "lervag/vimtex", ft = { "tex" } }
-    end
+    use { "lervag/vimtex", ft = { "tex" } }
 
     -- Since tmux is only available on Linux and Mac, we only enable these plugins
     -- for Linux and Mac
@@ -323,16 +307,12 @@ packer.startup {
     end
 
     -- Debugger plugin
-    if vim.g.is_win or vim.g.is_linux then
-      use { "sakhnik/nvim-gdb", run = { "bash install.sh" }, opt = true, setup = [[vim.cmd('packadd nvim-gdb')]] }
-    end
+    use { "sakhnik/nvim-gdb", run = { "bash install.sh" }, opt = true, setup = [[vim.cmd('packadd nvim-gdb')]] }
 
     -- Session management plugin
     use { "tpope/vim-obsession", cmd = "Obsession" }
 
-    if vim.g.is_linux then
-      use { "ojroques/vim-oscyank", cmd = { "OSCYank", "OSCYankReg" } }
-    end
+    use { "ojroques/vim-oscyank", cmd = { "OSCYank", "OSCYankReg" } }
 
     -- The missing auto-completion for cmdline!
     use { "gelguy/wilder.nvim", opt = true, setup = [[vim.cmd('packadd wilder.nvim')]] }
@@ -361,7 +341,7 @@ packer.startup {
     use { "ii14/emmylua-nvim", ft = "lua" }
 
     use { "j-hui/fidget.nvim", after = "nvim-lspconfig", config = [[require('config.fidget-nvim')]] }
-    
+
     use "mfussenegger/nvim-dap"
     use "simrat39/rust-tools.nvim"
   end,
