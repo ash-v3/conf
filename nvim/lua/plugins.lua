@@ -344,6 +344,19 @@ packer.startup {
 
     use "mfussenegger/nvim-dap"
     use "simrat39/rust-tools.nvim"
+    use "jbyuki/venn.nvim"
+    use 'anuvyklack/hydra.nvim'
+    use 'vim-autoformat/vim-autoformat'
+
+    use 'folke/trouble.nvim'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/vim-vsnip-integ'
+    use 'kosayoda/nvim-lightbulb'
+    use 'm-demare/hlargs.nvim'
+    use 'weilbith/nvim-code-action-menu'
+
   end,
   config = {
     max_jobs = 16,
@@ -377,3 +390,5 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
 })
 
 require("config.rust-tools")
+require("config.hydra")
+require("config.nvim-dap")
