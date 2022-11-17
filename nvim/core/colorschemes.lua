@@ -120,4 +120,5 @@ M.rand_colorscheme = function()
 end
 
 -- Load a random colorscheme
-M.gruvbox8()
+-- M.gruvbox8()
+vim.cmd([[colorscheme NeoSolarized]])

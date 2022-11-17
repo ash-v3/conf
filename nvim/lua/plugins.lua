@@ -356,7 +356,7 @@ packer.startup {
     use 'kosayoda/nvim-lightbulb'
     use 'm-demare/hlargs.nvim'
     use 'weilbith/nvim-code-action-menu'
-
+    use 'overcache/NeoSolarized'
   end,
   config = {
     max_jobs = 16,

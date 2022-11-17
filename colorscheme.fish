@@ -23,8 +23,8 @@ set -U fish_color_redirection green --bold --italics # IO redirections like >/de
 set -U fish_color_option green --bold # options starting with “-”, up to the first “--” parameter
 # yellow
 set -U fish_color_quote yellow # quoted text like "abc"
+set -U fish_color_param yellow # ordinary command parameters
 # blue
-set -U fish_color_param blue # ordinary command parameters
 # magenta
 set -U fish_color_keyword magenta --bold # keywords like if - this falls back on the command color if unset
 set -U fish_color_operator magenta --bold # parameter expansion operators like * and ~
