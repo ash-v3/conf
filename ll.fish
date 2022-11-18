@@ -1,3 +1,3 @@
 function ll
-lsd -alh $argv
+l -Al $argv
 end

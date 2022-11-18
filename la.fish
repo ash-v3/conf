@@ -1,3 +1,3 @@
 function la
-lsd -a $argv
+l -A $argv
 end

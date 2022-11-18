@@ -1,3 +1,3 @@
 function l
-lsd $argv
+lsd -F $argv
 end
