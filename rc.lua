@@ -217,7 +217,7 @@ awful.screen.connect_for_each_screen(function(s)
   { -- Right widgets
   layout = wibox.layout.fixed.horizontal,
   cpu_widget({
-    width = 250,
+    width = 100,
     step_width = 1,
     step_spacing = 0,
     color = '#00ff00'}),
