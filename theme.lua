@@ -14,15 +14,15 @@ local theme = {}
 theme.font = "Jetbrains Mono"
 
 theme.bg_normal   = "#000000"
-theme.bg_focus    = "#002b36"
-theme.bg_urgent   = "#ff0040"
-theme.bg_minimize = "#444444"
+theme.bg_focus    = "#073642"
+theme.bg_urgent   = "#dc322f"
+theme.bg_minimize = "#2aa198"
 theme.bg_systray  = theme.bg_normal
 
 theme.fg_normal   = "#ffffff"
 theme.fg_focus    = "#ffffff"
 theme.fg_urgent   = "#000000"
-theme.fg_minimize = "#ffffff"
+theme.fg_minimize = "#000000"
 
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(1)
