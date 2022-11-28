@@ -1,3 +1,3 @@
 function l
-lsd -F $argv
+lsd -F --group-directories-first $argv
 end
