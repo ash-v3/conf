@@ -220,7 +220,7 @@ awful.screen.connect_for_each_screen(function(s)
     width = 100,
     step_width = 1,
     step_spacing = 0,
-    color = '#00ff00'}),
+    color = '#00ffff'}),
     todo_widget(),
     ram_widget(),
     volume_widget{
