@@ -43,7 +43,12 @@ local opts = {
       ["rust-analyzer"] = {
         -- enable clippy on save
         checkOnSave = {
-          command = "clippy",
+          allFeatures = true,
+          overrideCommand = {
+            'cargo', 'clippy', '--workspace', '--message-format=json',
+            '--all-targets', '--all-features'
+          },
+          -- command = "clippy",
         },
       },
     },

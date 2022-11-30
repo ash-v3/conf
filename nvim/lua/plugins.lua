@@ -357,6 +357,8 @@ packer.startup {
     use 'm-demare/hlargs.nvim'
     use 'weilbith/nvim-code-action-menu'
     use 'overcache/NeoSolarized'
+    use 'saecki/crates.nvim'
+    use {'neoclide/coc.nvim', branch = 'release'}
   end,
   config = {
     max_jobs = 16,
@@ -392,3 +394,5 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
 require("config.rust-tools")
 require("config.hydra")
 require("config.nvim-dap")
+require("config.crates")
+require("config.coc")
