@@ -5,7 +5,6 @@ local cmd = vim.cmd -- execute Vim commands
 -- local b     = vim.bo            -- buffer-scoped options
 -- local w     = vim.wo            -- windows-scoped options
 
-cmd("colorscheme gruvbox8_hard")
 set.guifont = "JetBrains Mono"
 set.termguicolors = true -- Enable GUI colors for the terminal to get truecolor
 set.list = false -- show whitespace

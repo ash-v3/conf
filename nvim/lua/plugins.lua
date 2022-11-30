@@ -358,7 +358,7 @@ packer.startup {
     use 'weilbith/nvim-code-action-menu'
     use 'overcache/NeoSolarized'
     use 'saecki/crates.nvim'
-    use {'neoclide/coc.nvim', branch = 'release'}
+    -- use {'neoclide/coc.nvim', branch = 'release'}
   end,
   config = {
     max_jobs = 16,
@@ -395,4 +395,3 @@ require("config.rust-tools")
 require("config.hydra")
 require("config.nvim-dap")
 require("config.crates")
-require("config.coc")

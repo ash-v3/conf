@@ -1,4 +1,4 @@
--- MY RUST SHIT
+local rt = require("rust-tools")
 
 -- Set completeopt to have a better completion experience
 -- :help completeopt
@@ -13,6 +13,9 @@ vim.opt.shortmess = vim.opt.shortmess + "c"
 local function on_attach(client, buffer)
   -- This callback is called when the LSP is atttached/enabled for this buffer
   -- we could set keymaps related to LSP, etc here.
+  vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = buffer })
+  -- Code action groups
+  vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = buffer })
 end
 
 -- Configure LSP through rust-tools.nvim plugin.
@@ -55,7 +58,8 @@ local opts = {
   },
 }
 
-require("rust-tools").setup(opts)
+rt.setup(opts)
+rt.runnables.runnables()
 
 -- Setup Completion
 -- See https://github.com/hrsh7th/nvim-cmp#basic-configuration
