@@ -352,12 +352,6 @@ packer.startup({
 				require("config.nvim-dap")
 			end,
 		})
-		use({
-			"simrat39/rust-tools.nvim",
-			config = function()
-				require("config.rust-tools")
-			end,
-		})
 		use("jbyuki/venn.nvim")
 		use({
 			"anuvyklack/hydra.nvim",
@@ -404,21 +398,19 @@ packer.startup({
 				})
 			end,
 		})
-		use({
-			"rcarriga/nvim-dap-ui",
-			requires = { "mfussenegger/nvim-dap" },
-			config = function()
-				require("dapui").setup()
-			end,
-		})
+		--use({
+		--  "rcarriga/nvim-dap-ui",
+		--  requires = { "mfussenegger/nvim-dap" },
+		--  config = function()
+		--    require("dapui").setup()
+		--  end,
+		--})
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
 				require("project_nvim").setup({})
 			end,
 		})
-
-		use("puremourning/vimspector")
 
 		-- Lua
 		use({
@@ -433,6 +425,12 @@ packer.startup({
 			end,
 		})
 
+		use({
+			"simrat39/rust-tools.nvim",
+			config = function()
+				require("config.rust-tools")
+			end,
+		})
 		--- --- --- ---
 	end,
 	config = {
