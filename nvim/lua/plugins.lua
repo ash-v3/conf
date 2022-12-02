@@ -54,6 +54,7 @@ packer.startup({
 
 		-- nvim-lsp configuration (it relies on cmp-nvim-lsp, so it should be loaded after cmp-nvim-lsp).
 		use({ "neovim/nvim-lspconfig", after = "cmp-nvim-lsp", config = [[require('config.lsp')]] })
+		use("williamboman/mason-lspconfig.nvim")
 
 		-- nvim-cmp completion sources
 		use({ "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp" })
@@ -75,7 +76,6 @@ packer.startup({
 				require("mason").setup()
 			end,
 		})
-		use("williamboman/mason-lspconfig.nvim")
 
 		use({
 			"nvim-treesitter/nvim-treesitter",
@@ -197,8 +197,15 @@ packer.startup({
 		-- Multiple cursor plugin
 		use("mg979/vim-visual-multi")
 
-		-- Autosave files on certain events
-		use({ "907th/vim-auto-save", event = "InsertEnter" })
+		use({
+			"Pocco81/auto-save.nvim",
+			config = function()
+				require("auto-save").setup({
+					-- your config goes here
+					-- or just leave it empty :)
+				})
+			end,
+		})
 
 		-- Show undo history visually
 		use({ "simnalamburt/vim-mundo", cmd = { "MundoToggle", "MundoShow" } })
@@ -431,6 +438,7 @@ packer.startup({
 				require("config.rust-tools")
 			end,
 		})
+		use("navarasu/onedark.nvim")
 		--- --- --- ---
 	end,
 	config = {
