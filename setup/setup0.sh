@@ -1,4 +1,4 @@
-sudo pacman -Syyuu git base-devel go rustup
+sudo pacman -Syyuu git base-devel go rustup github-cli
 
 rustup default stable
 

@@ -23,12 +23,12 @@ set -U fish_color_redirection green --bold --italics # IO redirections like >/de
 set -U fish_color_option green --bold # options starting with “-”, up to the first “--” parameter
 # yellow
 set -U fish_color_quote yellow # quoted text like "abc"
-set -U fish_color_param yellow # ordinary command parameters
 # blue
 # magenta
 set -U fish_color_keyword magenta --bold # keywords like if - this falls back on the command color if unset
 set -U fish_color_operator magenta --bold # parameter expansion operators like * and ~
 set -U fish_color_end magenta --bold # process separators like ; and &
+set -U fish_color_param magenta # ordinary command parameters
 # cyan
 set -U fish_color_command cyan --bold # commands like echo
 set -U fish_color_user cyan # the username in the default prompt

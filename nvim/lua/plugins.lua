@@ -438,7 +438,6 @@ packer.startup({
 				require("config.rust-tools")
 			end,
 		})
-		use("navarasu/onedark.nvim")
 		--- --- --- ---
 	end,
 	config = {

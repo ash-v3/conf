@@ -121,20 +121,4 @@ end
 
 -- Load a random colorscheme
 -- M.gruvbox8()
---vim.cmd([[colorscheme onedark]])
-require("onedark").setup({
-	style = "darker", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-	transparent = false, -- Show/hide background
-
-	-- Change code style ---
-	-- Options are italic, bold, underline, none
-	-- You can configure multiple style with comma seperated, For e.g., keywords = 'italic,bold'
-	code_style = {
-		comments = "italic",
-		keywords = "none",
-		functions = "bold",
-		strings = "none",
-		variables = "none",
-	},
-})
-require("onedark").load()
+vim.cmd([[colorscheme NeoSolarized]])
