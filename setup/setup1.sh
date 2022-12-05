@@ -22,9 +22,6 @@ paru -Syyu neovim-git brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   macchanger
 
 
-# check stress vs stress-ng
-# samba?
-
 pip install pynvim sympy tensorflow
 
 cargo install thebook
