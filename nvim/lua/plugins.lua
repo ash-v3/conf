@@ -434,6 +434,7 @@ packer.startup({
 
 		use({
 			"simrat39/rust-tools.nvim",
+      after = "nvim-lspconfig",
 			config = function()
 				require("config.rust-tools")
 			end,
@@ -442,7 +443,7 @@ packer.startup({
 			"terror/chatgpt.nvim",
 			run = "pip3 install -r requirements.txt",
 		})
-
+		use("luk400/vim-jukit")
 		--- --- --- ---
 	end,
 	config = {
