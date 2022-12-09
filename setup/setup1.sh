@@ -19,9 +19,12 @@ paru -Syyu neovim-git brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   rm-improved stress stress-ng tmux tor \
   unrar woeusb wtfutil wttr \
   yarn proton-ge-custom-bin protonfixes-git deluge deluge-gtk \
-  macchanger visual-studio-code-bin
+  macchanger visual-studio-code-bin inxi dkms mesa \
+  mesa-utils neovim-lspconfig-git
 
 
-pip install pynvim sympy tensorflow transformers
+pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
 cargo install thebook
+
+sudo npm i -g pyright

@@ -434,7 +434,7 @@ packer.startup({
 
 		use({
 			"simrat39/rust-tools.nvim",
-      after = "nvim-lspconfig",
+			after = "nvim-lspconfig",
 			config = function()
 				require("config.rust-tools")
 			end,
@@ -444,6 +444,15 @@ packer.startup({
 			run = "pip3 install -r requirements.txt",
 		})
 		use("luk400/vim-jukit")
+		use({
+			"karb94/neoscroll.nvim",
+			event = "VimEnter",
+			config = function()
+				vim.defer_fn(function()
+					require("config.neoscroll")
+				end, 2000)
+			end,
+		})
 		--- --- --- ---
 	end,
 	config = {

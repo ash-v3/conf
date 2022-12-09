@@ -1,5 +1,5 @@
-function redscreen
-    set -l color ff0000
+function fillscreencolor
+    set -l color $argv
     set i 0
     while test $i -lt 100
         set_color $color
