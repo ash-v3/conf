@@ -443,7 +443,6 @@ packer.startup({
 			"terror/chatgpt.nvim",
 			run = "pip3 install -r requirements.txt",
 		})
-		use("luk400/vim-jukit")
 		use({
 			"karb94/neoscroll.nvim",
 			event = "VimEnter",
