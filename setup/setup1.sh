@@ -1,9 +1,9 @@
-paru -Syyu neovim-git brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
-  nerd-fonts-complete noto-fonts-emoji kitty-git fish-git lsd-git \
+paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
+  nerd-fonts-complete noto-fonts-emoji kitty fish lsd \
   github-cli discord bacon bat blanket \
   blender bottom broot codelldb-bin cointop \
   cudnn duf dust eslint fd \
-  fish fzf gimp git-delta-git gitoxide \
+  fish fzf gimp git-delta gitoxide \
   gnuplot gping heroic-games-launcher hexyl hyperfine \
   jdk libreoffice lua-language-server lux-dl melody \
   onefetch p7zip pastel procs python \
@@ -18,10 +18,9 @@ paru -Syyu neovim-git brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   pavucontrol perf picom popsicle ranger \
   rm-improved stress stress-ng tmux tor \
   unrar woeusb wtfutil wttr \
-  yarn proton-ge-custom-bin protonfixes-git deluge deluge-gtk \
-  macchanger visual-studio-code-bin inxi dkms mesa \
-  mesa-utils neovim-lspconfig-git
-
+  yarn proton-ge-custom-bin protonfixes deluge deluge-gtk \
+  macchanger code inxi dkms mesa \
+  mesa-utils neovim-lspconfig protontricks lutris
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
