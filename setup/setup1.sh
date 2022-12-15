@@ -22,7 +22,7 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   macchanger code inxi dkms mesa \
   mesa-utils neovim-lspconfig protontricks lutris
 
-pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
+pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl spotdl
 
 cargo install thebook
 
