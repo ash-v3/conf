@@ -20,9 +20,10 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   unrar woeusb wtfutil wttr \
   yarn proton-ge-custom-bin protonfixes deluge deluge-gtk \
   macchanger code inxi dkms mesa \
-  mesa-utils neovim-lspconfig protontricks lutris
+  mesa-utils neovim-lspconfig protontricks lutris nvtop \
+  nvitop screen
 
-pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl spotdl
+pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
 cargo install thebook
 
