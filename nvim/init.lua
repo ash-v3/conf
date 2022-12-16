@@ -1,28 +1,36 @@
--- This is my personal Nvim configuration supporting Mac, Linux and Windows, with various plugins configured.
--- This configuration evolves as I learn more about Nvim and become more proficient in using Nvim.
--- Since it is very long (more than 1000 lines!), you should read it carefully and take only the settings that suit you.
--- I would not recommend cloning this repo and replace your own config. Good configurations are personal,
--- built over time with a lot of polish.
---
--- Author: Jie-dong Hao
--- Email: jdhao@hotmail.com
--- Blog: https://jdhao.github.io/
+vim.defer_fn(function()
+  pcall(require, "impatient")
+end, 0)
 
-local api = vim.api
-local utils = require("utils")
+require "core"
+require "core.options"
 
-local core_conf_files = {
-	"globals.lua", -- some global settings
-	"options.vim", -- setting options in nvim
-	"autocommands.vim", -- various autocommands
-	"mappings.lua", -- all the user-defined mappings
-	"plugins.vim", -- all the plugins installed and their configurations
-	"colorschemes.lua", -- colorscheme settings
-}
+-- setup packer + plugins
+local fn = vim.fn
+local install_path = fn.stdpath "data" .. "/site/pack/packer/opt/packer.nvim"
 
--- source all the core config files
-for _, name in ipairs(core_conf_files) do
-	local path = string.format("%s/core/%s", vim.fn.stdpath("config"), name)
-	local source_cmd = "source " .. path
-	vim.cmd(source_cmd)
+if fn.empty(fn.glob(install_path)) > 0 then
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1e222a" })
+  print "Cloning packer .."
+  fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
+
+  -- install plugins + compile their configs
+  vim.cmd "packadd packer.nvim"
+  require "plugins"
+  vim.cmd "PackerSync"
+
+  -- install binaries from mason.nvim & tsparsers
+  vim.api.nvim_create_autocmd("User", {
+    pattern = "PackerComplete",
+    callback = function()
+      vim.cmd "bw | silent! MasonInstallAll" -- close packer window
+      require("packer").loader "nvim-treesitter"
+    end,
+  })
 end
+
+pcall(require, "custom")
+
+require("core.utils").load_mappings()
+
+vim.cmd[[colorscheme neon]]

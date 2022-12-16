@@ -21,7 +21,7 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   yarn proton-ge-custom-bin protonfixes deluge deluge-gtk \
   macchanger code inxi dkms mesa \
   mesa-utils neovim-lspconfig protontricks lutris nvtop \
-  nvitop screen
+  nvitop ascii-image-converter
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 

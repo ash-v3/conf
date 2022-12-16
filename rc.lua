@@ -633,6 +633,7 @@ end)
 
 awful.spawn.with_shell("~/.screenlayout/default.sh")
 
---awful.util.spawn("picom -b")
+awful.util.spawn("picom -b")
+
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 -- }}}
