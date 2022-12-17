@@ -539,6 +539,12 @@ return packer.startup(function(use)
 			require("user.abbrev-man")
 		end,
 	})
+	use({
+		"tamton-aquib/zone.nvim",
+		config = function()
+			require("zone").setup()
+		end,
+	})
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
