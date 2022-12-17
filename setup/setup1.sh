@@ -21,10 +21,12 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   yarn proton-ge-custom-bin protonfixes deluge deluge-gtk \
   macchanger code inxi dkms mesa \
   mesa-utils neovim-lspconfig protontricks lutris nvtop \
-  nvitop ascii-image-converter
+  nvitop ascii-image-converter texlive-most pandoc neovim-web-devicons-git\
+  cscope ctags xsel
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
 cargo install thebook
 
 sudo npm i -g pyright
+sudo npm i -g neovim

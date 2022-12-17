@@ -1,0 +1,113 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+    
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    
+    guifont = "JetBrains Mono Nerd Font"
+
+    # auto_disable_touchpad = 0
+    relativenumber = false
+
+[[layers]]
+name = 'edit'
+autosave_events = ['InsertLeave', 'TextChanged']
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+name = 'checkers'
+[[layers]]
+name = 'cscope'
+[[layers]]
+name = 'ctrlspace'
+[[layers]]
+name = 'debug'
+[[layers]]
+name = 'default'
+[[layers]]
+name = 'format'
+format_on_save = true
+silent_format = true
+[[layers]]
+name = 'fzf'
+[[layers]]
+name = 'git'
+[[layers]]
+name = 'github'
+[[layers]]
+name = 'gtags'
+[[layers]]
+name = 'lang#go'
+[[layers]]
+name = 'lang#latex'
+[[layers]]
+name = 'lang#lua'
+[[layers]]
+name = 'lang#markdown'
+[[layers]]
+name = 'lang#python'
+[[layers]]
+name = 'lang#rust'
+[[layers]]
+name = 'lang#sh'
+[[layers]]
+name = 'lang#toml'
+[[layers]]
+name = 'lang#vim'
+[[layers]]
+name = 'lsp'
+[[layers]]
+name = 'leaderf'
+[[layers]]
+name = 'shell'
+[[layers]]
+name = 'ssh'
+[[layers]]
+name = 'sudo'
+[[layers]]
+name = 'telescope'
+[[layers]]
+name = 'test'
+[[layers]]
+name = 'tmux'
+[[layers]]
+name = 'tools'
+[[layers]]
+name = 'treesitter'
+[[layers]]
+name = 'ui'
+[[layers]]
+name = 'VersionControl'
+
+# [[custom_plugins]]
