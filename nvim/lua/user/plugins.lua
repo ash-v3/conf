@@ -539,10 +539,12 @@ return packer.startup(function(use)
 			require("user.abbrev-man")
 		end,
 	})
+	use("morhetz/gruvbox")
+	use("folke/tokyonight.nvim")
 	use({
-		"tamton-aquib/zone.nvim",
+		"luukvbaal/nnn.nvim",
 		config = function()
-			require("zone").setup()
+			require("nnn").setup()
 		end,
 	})
 
