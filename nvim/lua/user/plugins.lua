@@ -135,13 +135,6 @@ return packer.startup(function(use)
 
 	use("mg979/vim-visual-multi")
 
-	use({
-		"Pocco81/auto-save.nvim",
-		config = function()
-			require("auto-save").setup()
-		end,
-	})
-
 	use({ "stevearc/dressing.nvim" })
 
 	use({
@@ -540,13 +533,6 @@ return packer.startup(function(use)
 		end,
 	})
 	use("morhetz/gruvbox")
-	use("folke/tokyonight.nvim")
-	use({
-		"luukvbaal/nnn.nvim",
-		config = function()
-			require("nnn").setup()
-		end,
-	})
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

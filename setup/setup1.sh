@@ -15,14 +15,14 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   brightnessctl calibre cmus dhcpcd dtrx \
   evince feh qeh gitui gparted \
   icat ipython nftables nmap atlauncher \
-  pavucontrol perf picom popsicle nnn \
+  pavucontrol perf picom popsicle ranger \
   rm-improved stress stress-ng tmux tor \
   unrar woeusb wtfutil wttr \
   yarn proton-ge-custom-bin protonfixes deluge deluge-gtk \
   macchanger code inxi dkms mesa \
   mesa-utils neovim-lspconfig protontricks lutris nvtop \
   nvitop ascii-image-converter texlive-most pandoc neovim-web-devicons-git\
-  cscope ctags xsel scrot
+  cscope ctags xsel scrot ffmpegthumbnailer
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
