@@ -46,7 +46,11 @@ return packer.startup(function(use)
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "kyazdani42/nvim-tree.lua" })
-	use({ "akinsho/bufferline.nvim" })
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+	use({
+		"romgrk/barbar.nvim",
+		wants = "nvim-web-devicons",
+	})
 	use({ "moll/vim-bbye" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
@@ -231,7 +235,17 @@ return packer.startup(function(use)
 	})
 	use("vim-autoformat/vim-autoformat")
 
-	use("folke/trouble.nvim")
+	use({
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
 	use("hrsh7th/cmp-vsnip")
 	use("hrsh7th/vim-vsnip")
@@ -299,16 +313,19 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use({
-		"ray-x/navigator.lua",
-		requires = {
-			{ "ray-x/guihua.lua", run = "cd lua/fzy && make" },
-			{ "neovim/nvim-lspconfig" },
-		},
-		config = function()
-			require("navigator").setup()
-		end,
-	})
+	use({ "ray-x/guihua.lua", run = "cd lua/fzy && make" })
+
+	-- #### WARNING CAUSES ANNOYING DIAGNOSTIC POPUP ####
+	-- use({
+	-- 	"ray-x/navigator.lua",
+	-- 	requires = {
+	-- 		{ "ray-x/guihua.lua", run = "cd lua/fzy && make" },
+	-- 		{ "neovim/nvim-lspconfig" },
+	-- 	},
+	-- 	config = function()
+	-- 		require("navigator").setup()
+	-- 	end,
+	-- })
 
 	use({
 		"ldelossa/litee.nvim",
@@ -328,14 +345,6 @@ return packer.startup(function(use)
 		"potamides/pantran.nvim",
 	})
 	use("rafamadriz/neon")
-
-	use({
-		"romgrk/barbar.nvim",
-		wants = "nvim-web-devicons",
-		config = function()
-			require("bufferline").setup()
-		end,
-	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	use({
@@ -447,7 +456,6 @@ return packer.startup(function(use)
 		end,
 	})
 	use("LudoPinelli/comment-box.nvim")
-	use("rktjmp/shenzhen-solitaire.nvim")
 	use({
 		"edluffy/hologram.nvim",
 		config = function()

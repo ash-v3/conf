@@ -22,7 +22,8 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   macchanger code inxi dkms mesa \
   mesa-utils neovim-lspconfig protontricks lutris nvtop \
   nvitop ascii-image-converter texlive-most pandoc neovim-web-devicons-git\
-  cscope ctags xsel scrot ffmpegthumbnailer
+  cscope ctags xsel scrot ffmpegthumbnailer \
+  pipes-rs-git
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 

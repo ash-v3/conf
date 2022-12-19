@@ -6,9 +6,9 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 -- Modes
 --   normal_mode = "n",
@@ -63,8 +63,48 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Bufferline
+-- Move to previous/next
+keymap('n', '<A-,>', ':BufferPrevious<CR>', opts)
+keymap('n', '<A-.>', ':BufferNext<CR>', opts)
+-- Re-order to previous/next
+keymap('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
+keymap('n', '<A->>', ':BufferMoveNext<CR>', opts)
+-- Goto buffer in position...
+keymap('n', '<A-1>', ':BufferGoto 1<CR>', opts)
+keymap('n', '<A-2>', ':BufferGoto 2<CR>', opts)
+keymap('n', '<A-3>', ':BufferGoto 3<CR>', opts)
+keymap('n', '<A-4>', ':BufferGoto 4<CR>', opts)
+keymap('n', '<A-5>', ':BufferGoto 5<CR>', opts)
+keymap('n', '<A-6>', ':BufferGoto 6<CR>', opts)
+keymap('n', '<A-7>', ':BufferGoto 7<CR>', opts)
+keymap('n', '<A-8>', ':BufferGoto 8<CR>', opts)
+keymap('n', '<A-9>', ':BufferGoto 9<CR>', opts)
+keymap('n', '<A-0>', ':BufferLast<CR>', opts)
+-- Pin/unpin buffer
+keymap('n', '<A-p>', ':BufferPin<CR>', opts)
+-- Close buffer
+keymap('n', '<A-c>', ':BufferClose<CR>', opts)
+-- Wipeout buffer
+--                 :BufferWipeout
+-- Close commands
+--                 :BufferCloseAllButCurrent
+--                 :BufferCloseAllButPinned
+--                 :BufferCloseAllButCurrentOrPinned
+--                 :BufferCloseBuffersLeft
+--                 :BufferCloseBuffersRight
+-- Magic buffer-picking mode
+keymap('n', '<C-p>', ':BufferPick<CR>', opts)
+-- Sort automatically by...
+keymap('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
+keymap('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
+keymap('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
+keymap('n', '<Space>bw', ':BufferOrderByWindowNumber<CR>', opts)
+
+-- Nvim-tree
+keymap('n', '<Leader>nt', ':NvimTreeToggle<CR>', opts)
