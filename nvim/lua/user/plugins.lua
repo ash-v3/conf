@@ -115,6 +115,9 @@ return packer.startup(function(use)
 	use({
 		"kevinhwang91/nvim-hlslens",
 		keys = { { "n", "*" }, { "n", "#" }, { "n", "n" }, { "n", "N" } },
+		config = function()
+			require("hlslens").setup()
+		end,
 	})
 	-- File search, tag search and more
 	use({ "Yggdroot/LeaderF", cmd = "Leaderf", run = ":LeaderfInstallCExtension" })
@@ -299,10 +302,10 @@ return packer.startup(function(use)
 			require("user.rust-tools")
 		end,
 	})
-	use({
-		"terror/chatgpt.nvim",
-		run = "pip3 install -r requirements.txt",
-	})
+	-- use({
+	-- 	"terror/chatgpt.nvim",
+	-- 	run = "pip3 install -r requirements.txt",
+	-- })
 	use({
 		"karb94/neoscroll.nvim",
 		event = "VimEnter",
@@ -541,6 +544,31 @@ return packer.startup(function(use)
 		end,
 	})
 	use("morhetz/gruvbox")
+	use({
+		"yamatsum/nvim-cursorline",
+		config = function()
+			require("nvim-cursorline").setup()
+		end,
+	})
+	use({
+		"simrat39/symbols-outline.nvim",
+		config = function()
+			require("symbols-outline").setup()
+		end,
+	})
+	-- use({
+	-- 	"jackMort/ChatGPT.nvim",
+	-- 	config = function()
+	-- 		require("chatgpt").setup({
+	-- 			-- optional configuration
+	-- 		})
+	-- 	end,
+	-- 	requires = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 	},
+	-- })
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
