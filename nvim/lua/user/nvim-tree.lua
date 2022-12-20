@@ -2,6 +2,8 @@ local keymap = vim.keymap
 local nvim_tree = require("nvim-tree")
 
 nvim_tree.setup {
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
   auto_reload_on_write = true,
   disable_netrw = false,
   hijack_cursor = false,
@@ -46,8 +48,8 @@ nvim_tree.setup {
     auto_open = true,
   },
   update_focused_file = {
-    enable = false,
-    update_cwd = false,
+    enable = true,
+    update_cwd = true,
     ignore_list = {},
   },
   ignore_ft_on_setup = {},

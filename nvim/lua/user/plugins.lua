@@ -54,7 +54,12 @@ return packer.startup(function(use)
 	use({ "moll/vim-bbye" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
-	use({ "ahmedkhalf/project.nvim" })
+	use({
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup()
+		end,
+	})
 	use({ "lewis6991/impatient.nvim" })
 	use({
 		"nathom/filetype.nvim",

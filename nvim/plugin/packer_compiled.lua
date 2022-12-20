@@ -436,7 +436,7 @@ _G.packer_plugins = {
     url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["neoterm.nvim"] = {
-    config = { "\27LJ\2\nb\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\17clear_on_run\2\tmode\rvertical\rnoinsert\1\nsetup\fneoterm\frequire\0" },
+    config = { "\27LJ\2\nb\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\rnoinsert\1\tmode\rvertical\17clear_on_run\2\nsetup\fneoterm\frequire\0" },
     loaded = true,
     path = "/home/ash/.local/share/nvim/site/pack/packer/start/neoterm.nvim",
     url = "https://github.com/itmecho/neoterm.nvim"
@@ -619,6 +619,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["project.nvim"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17project_nvim\frequire\0" },
     loaded = true,
     path = "/home/ash/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
@@ -708,7 +709,7 @@ _G.packer_plugins = {
     url = "https://github.com/folke/trouble.nvim"
   },
   ultisnips = {
-    after = { "vim-snippets", "cmp-nvim-ultisnips" },
+    after = { "cmp-nvim-ultisnips", "vim-snippets" },
     after_files = { "/home/ash/.local/share/nvim/site/pack/packer/opt/ultisnips/after/plugin/UltiSnips_after.vim" },
     loaded = false,
     needs_bufread = true,
@@ -952,70 +953,18 @@ time([[Setup for nvim-gdb]], false)
 time([[Setup for wilder.nvim]], true)
 vim.cmd('packadd wilder.nvim')
 time([[Setup for wilder.nvim]], false)
--- Config for: filetype.nvim
-time([[Config for filetype.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rfiletype\frequire\0", "config", "filetype.nvim")
-time([[Config for filetype.nvim]], false)
--- Config for: nvim-coverage
-time([[Config for nvim-coverage]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0", "config", "nvim-coverage")
-time([[Config for nvim-coverage]], false)
--- Config for: neorg
-time([[Config for neorg]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nneorg\frequire\0", "config", "neorg")
-time([[Config for neorg]], false)
--- Config for: nvim-cursorline
-time([[Config for nvim-cursorline]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-cursorline\frequire\0", "config", "nvim-cursorline")
-time([[Config for nvim-cursorline]], false)
--- Config for: image.nvim
-time([[Config for image.nvim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nimage\frequire\0", "config", "image.nvim")
-time([[Config for image.nvim]], false)
--- Config for: hydra.nvim
-time([[Config for hydra.nvim]], true)
-try_loadstring("\27LJ\2\n*\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\15user.hydra\frequire\0", "config", "hydra.nvim")
-time([[Config for hydra.nvim]], false)
--- Config for: due.nvim
-time([[Config for due.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rdue_nvim\frequire\0", "config", "due.nvim")
-time([[Config for due.nvim]], false)
--- Config for: cinnamon.nvim
-time([[Config for cinnamon.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcinnamon\frequire\0", "config", "cinnamon.nvim")
-time([[Config for cinnamon.nvim]], false)
--- Config for: cmp-spell
-time([[Config for cmp-spell]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bcmp\frequire\0", "config", "cmp-spell")
-time([[Config for cmp-spell]], false)
--- Config for: cheatsheet.nvim
-time([[Config for cheatsheet.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15cheatsheet\frequire\0", "config", "cheatsheet.nvim")
-time([[Config for cheatsheet.nvim]], false)
--- Config for: neotest
-time([[Config for neotest]], true)
-try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17user.neotest\frequire\0", "config", "neotest")
-time([[Config for neotest]], false)
+-- Config for: symbols-outline.nvim
+time([[Config for symbols-outline.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20symbols-outline\frequire\0", "config", "symbols-outline.nvim")
+time([[Config for symbols-outline.nvim]], false)
 -- Config for: crates.nvim
 time([[Config for crates.nvim]], true)
 try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16user.crates\frequire\0", "config", "crates.nvim")
 time([[Config for crates.nvim]], false)
--- Config for: sniprun
-time([[Config for sniprun]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fsniprun\frequire\0", "config", "sniprun")
-time([[Config for sniprun]], false)
--- Config for: coc.nvim
-time([[Config for coc.nvim]], true)
-try_loadstring("\27LJ\2\n(\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\ruser.coc\frequire\0", "config", "coc.nvim")
-time([[Config for coc.nvim]], false)
--- Config for: neoterm.nvim
-time([[Config for neoterm.nvim]], true)
-try_loadstring("\27LJ\2\nb\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\17clear_on_run\2\tmode\rvertical\rnoinsert\1\nsetup\fneoterm\frequire\0", "config", "neoterm.nvim")
-time([[Config for neoterm.nvim]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time([[Config for todo-comments.nvim]], false)
+-- Config for: sort.nvim
+time([[Config for sort.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\tsort\frequire\0", "config", "sort.nvim")
+time([[Config for sort.nvim]], false)
 -- Config for: JABS.nvim
 time([[Config for JABS.nvim]], true)
 try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tjabs\frequire\0", "config", "JABS.nvim")
@@ -1024,10 +973,66 @@ time([[Config for JABS.nvim]], false)
 time([[Config for nvim-dap-ui]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ndapui\frequire\0", "config", "nvim-dap-ui")
 time([[Config for nvim-dap-ui]], false)
--- Config for: symbols-outline.nvim
-time([[Config for symbols-outline.nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20symbols-outline\frequire\0", "config", "symbols-outline.nvim")
-time([[Config for symbols-outline.nvim]], false)
+-- Config for: coc.nvim
+time([[Config for coc.nvim]], true)
+try_loadstring("\27LJ\2\n(\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\ruser.coc\frequire\0", "config", "coc.nvim")
+time([[Config for coc.nvim]], false)
+-- Config for: nvim-dap
+time([[Config for nvim-dap]], true)
+try_loadstring("\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18user.nvim-dap\frequire\0", "config", "nvim-dap")
+time([[Config for nvim-dap]], false)
+-- Config for: AbbrevMan.nvim
+time([[Config for AbbrevMan.nvim]], true)
+try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20user.abbrev-man\frequire\0", "config", "AbbrevMan.nvim")
+time([[Config for AbbrevMan.nvim]], false)
+-- Config for: nvim-coverage
+time([[Config for nvim-coverage]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0", "config", "nvim-coverage")
+time([[Config for nvim-coverage]], false)
+-- Config for: neoterm.nvim
+time([[Config for neoterm.nvim]], true)
+try_loadstring("\27LJ\2\nb\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\rnoinsert\1\tmode\rvertical\17clear_on_run\2\nsetup\fneoterm\frequire\0", "config", "neoterm.nvim")
+time([[Config for neoterm.nvim]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17project_nvim\frequire\0", "config", "project.nvim")
+time([[Config for project.nvim]], false)
+-- Config for: focus.nvim
+time([[Config for focus.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nfocus\frequire\0", "config", "focus.nvim")
+time([[Config for focus.nvim]], false)
+-- Config for: filetype.nvim
+time([[Config for filetype.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rfiletype\frequire\0", "config", "filetype.nvim")
+time([[Config for filetype.nvim]], false)
+-- Config for: cmp-spell
+time([[Config for cmp-spell]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bcmp\frequire\0", "config", "cmp-spell")
+time([[Config for cmp-spell]], false)
+-- Config for: mind.nvim
+time([[Config for mind.nvim]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tmind\frequire\0", "config", "mind.nvim")
+time([[Config for mind.nvim]], false)
+-- Config for: neotest
+time([[Config for neotest]], true)
+try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17user.neotest\frequire\0", "config", "neotest")
+time([[Config for neotest]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
+-- Config for: cinnamon.nvim
+time([[Config for cinnamon.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcinnamon\frequire\0", "config", "cinnamon.nvim")
+time([[Config for cinnamon.nvim]], false)
+-- Config for: hologram.nvim
+time([[Config for hologram.nvim]], true)
+try_loadstring("\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17auto_display\2\nsetup\rhologram\frequire\0", "config", "hologram.nvim")
+time([[Config for hologram.nvim]], false)
+-- Config for: litee.nvim
+time([[Config for litee.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14litee.lib\frequire\0", "config", "litee.nvim")
+time([[Config for litee.nvim]], false)
 -- Config for: undotree
 time([[Config for undotree]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rundotree\frequire\0", "config", "undotree")
@@ -1036,65 +1041,60 @@ time([[Config for undotree]], false)
 time([[Config for tabout.nvim]], true)
 try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vtabout\frequire\0", "config", "tabout.nvim")
 time([[Config for tabout.nvim]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
 -- Config for: go.nvim
 time([[Config for go.nvim]], true)
 try_loadstring("\27LJ\2\n0\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ago\frequire\0", "config", "go.nvim")
 time([[Config for go.nvim]], false)
--- Config for: focus.nvim
-time([[Config for focus.nvim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nfocus\frequire\0", "config", "focus.nvim")
-time([[Config for focus.nvim]], false)
--- Config for: AbbrevMan.nvim
-time([[Config for AbbrevMan.nvim]], true)
-try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20user.abbrev-man\frequire\0", "config", "AbbrevMan.nvim")
-time([[Config for AbbrevMan.nvim]], false)
--- Config for: litee.nvim
-time([[Config for litee.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14litee.lib\frequire\0", "config", "litee.nvim")
-time([[Config for litee.nvim]], false)
--- Config for: mind.nvim
-time([[Config for mind.nvim]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tmind\frequire\0", "config", "mind.nvim")
-time([[Config for mind.nvim]], false)
--- Config for: sort.nvim
-time([[Config for sort.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\tsort\frequire\0", "config", "sort.nvim")
-time([[Config for sort.nvim]], false)
--- Config for: git-conflict.nvim
-time([[Config for git-conflict.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
-time([[Config for git-conflict.nvim]], false)
--- Config for: hologram.nvim
-time([[Config for hologram.nvim]], true)
-try_loadstring("\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17auto_display\2\nsetup\rhologram\frequire\0", "config", "hologram.nvim")
-time([[Config for hologram.nvim]], false)
+-- Config for: image.nvim
+time([[Config for image.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nimage\frequire\0", "config", "image.nvim")
+time([[Config for image.nvim]], false)
 -- Config for: renamer.nvim
 time([[Config for renamer.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\frenamer\frequire\0", "config", "renamer.nvim")
 time([[Config for renamer.nvim]], false)
--- Config for: jupyter-nvim
-time([[Config for jupyter-nvim]], true)
-try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17jupyter-nvim\frequire\0", "config", "jupyter-nvim")
-time([[Config for jupyter-nvim]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
+-- Config for: due.nvim
+time([[Config for due.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rdue_nvim\frequire\0", "config", "due.nvim")
+time([[Config for due.nvim]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
 -- Config for: nvim-neoclip.lua
 time([[Config for nvim-neoclip.lua]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fneoclip\frequire\0", "config", "nvim-neoclip.lua")
 time([[Config for nvim-neoclip.lua]], false)
--- Config for: nvim-dap
-time([[Config for nvim-dap]], true)
-try_loadstring("\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18user.nvim-dap\frequire\0", "config", "nvim-dap")
-time([[Config for nvim-dap]], false)
+-- Config for: sniprun
+time([[Config for sniprun]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fsniprun\frequire\0", "config", "sniprun")
+time([[Config for sniprun]], false)
+-- Config for: nvim-cursorline
+time([[Config for nvim-cursorline]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-cursorline\frequire\0", "config", "nvim-cursorline")
+time([[Config for nvim-cursorline]], false)
+-- Config for: git-conflict.nvim
+time([[Config for git-conflict.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
+time([[Config for git-conflict.nvim]], false)
+-- Config for: cheatsheet.nvim
+time([[Config for cheatsheet.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15cheatsheet\frequire\0", "config", "cheatsheet.nvim")
+time([[Config for cheatsheet.nvim]], false)
+-- Config for: hydra.nvim
+time([[Config for hydra.nvim]], true)
+try_loadstring("\27LJ\2\n*\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\15user.hydra\frequire\0", "config", "hydra.nvim")
+time([[Config for hydra.nvim]], false)
+-- Config for: jupyter-nvim
+time([[Config for jupyter-nvim]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17jupyter-nvim\frequire\0", "config", "jupyter-nvim")
+time([[Config for jupyter-nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd telescope.nvim ]]
-vim.cmd [[ packadd telescope-symbols.nvim ]]
-vim.cmd [[ packadd nvim-cmp ]]
-vim.cmd [[ packadd cmp-emoji ]]
-vim.cmd [[ packadd cmp-omni ]]
 vim.cmd [[ packadd nvim-lspconfig ]]
 vim.cmd [[ packadd rust-tools.nvim ]]
 
@@ -1106,6 +1106,11 @@ vim.cmd [[ packadd fidget.nvim ]]
 -- Config for: fidget.nvim
 require('user.fidget-nvim')
 
+vim.cmd [[ packadd telescope.nvim ]]
+vim.cmd [[ packadd telescope-symbols.nvim ]]
+vim.cmd [[ packadd nvim-cmp ]]
+vim.cmd [[ packadd cmp-omni ]]
+vim.cmd [[ packadd cmp-emoji ]]
 time([[Sequenced loading]], false)
 
 -- Command lazy-loads
@@ -1124,12 +1129,26 @@ pcall(vim.api.nvim_create_user_command, 'Conflicted', function(cmdargs)
           require('packer.load')({'vim-conflicted'}, { cmd = 'Conflicted' }, _G.packer_plugins)
           return vim.fn.getcompletion('Conflicted ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'Vista', function(cmdargs)
-          require('packer.load')({'vista.vim'}, { cmd = 'Vista', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'DocsViewToggle', function(cmdargs)
+          require('packer.load')({'nvim-docs-view'}, { cmd = 'DocsViewToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vista.vim'}, { cmd = 'Vista' }, _G.packer_plugins)
-          return vim.fn.getcompletion('Vista ', 'cmdline')
+          require('packer.load')({'nvim-docs-view'}, { cmd = 'DocsViewToggle' }, _G.packer_plugins)
+          return vim.fn.getcompletion('DocsViewToggle ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Obsession', function(cmdargs)
+          require('packer.load')({'vim-obsession'}, { cmd = 'Obsession', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-obsession'}, { cmd = 'Obsession' }, _G.packer_plugins)
+          return vim.fn.getcompletion('Obsession ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Neoformat', function(cmdargs)
+          require('packer.load')({'neoformat'}, { cmd = 'Neoformat', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'neoformat'}, { cmd = 'Neoformat' }, _G.packer_plugins)
+          return vim.fn.getcompletion('Neoformat ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'OSCYank', function(cmdargs)
           require('packer.load')({'vim-oscyank'}, { cmd = 'OSCYank', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -1138,12 +1157,12 @@ pcall(vim.api.nvim_create_user_command, 'OSCYank', function(cmdargs)
           require('packer.load')({'vim-oscyank'}, { cmd = 'OSCYank' }, _G.packer_plugins)
           return vim.fn.getcompletion('OSCYank ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'Scriptnames', function(cmdargs)
-          require('packer.load')({'vim-scriptease'}, { cmd = 'Scriptnames', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'OSCYankReg', function(cmdargs)
+          require('packer.load')({'vim-oscyank'}, { cmd = 'OSCYankReg', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-scriptease'}, { cmd = 'Scriptnames' }, _G.packer_plugins)
-          return vim.fn.getcompletion('Scriptnames ', 'cmdline')
+          require('packer.load')({'vim-oscyank'}, { cmd = 'OSCYankReg' }, _G.packer_plugins)
+          return vim.fn.getcompletion('OSCYankReg ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'Message', function(cmdargs)
           require('packer.load')({'vim-scriptease'}, { cmd = 'Message', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -1159,12 +1178,12 @@ pcall(vim.api.nvim_create_user_command, 'Verbose', function(cmdargs)
           require('packer.load')({'vim-scriptease'}, { cmd = 'Verbose' }, _G.packer_plugins)
           return vim.fn.getcompletion('Verbose ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'Neoformat', function(cmdargs)
-          require('packer.load')({'neoformat'}, { cmd = 'Neoformat', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'Scriptnames', function(cmdargs)
+          require('packer.load')({'vim-scriptease'}, { cmd = 'Scriptnames', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'neoformat'}, { cmd = 'Neoformat' }, _G.packer_plugins)
-          return vim.fn.getcompletion('Neoformat ', 'cmdline')
+          require('packer.load')({'vim-scriptease'}, { cmd = 'Scriptnames' }, _G.packer_plugins)
+          return vim.fn.getcompletion('Scriptnames ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'AsyncRun', function(cmdargs)
           require('packer.load')({'asyncrun.vim'}, { cmd = 'AsyncRun', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -1173,12 +1192,12 @@ pcall(vim.api.nvim_create_user_command, 'AsyncRun', function(cmdargs)
           require('packer.load')({'asyncrun.vim'}, { cmd = 'AsyncRun' }, _G.packer_plugins)
           return vim.fn.getcompletion('AsyncRun ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'Leaderf', function(cmdargs)
-          require('packer.load')({'LeaderF'}, { cmd = 'Leaderf', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'Vista', function(cmdargs)
+          require('packer.load')({'vista.vim'}, { cmd = 'Vista', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'LeaderF'}, { cmd = 'Leaderf' }, _G.packer_plugins)
-          return vim.fn.getcompletion('Leaderf ', 'cmdline')
+          require('packer.load')({'vista.vim'}, { cmd = 'Vista' }, _G.packer_plugins)
+          return vim.fn.getcompletion('Vista ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'Delete', function(cmdargs)
           require('packer.load')({'vim-eunuch'}, { cmd = 'Delete', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -1187,12 +1206,12 @@ pcall(vim.api.nvim_create_user_command, 'Delete', function(cmdargs)
           require('packer.load')({'vim-eunuch'}, { cmd = 'Delete' }, _G.packer_plugins)
           return vim.fn.getcompletion('Delete ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'DocsViewToggle', function(cmdargs)
-          require('packer.load')({'nvim-docs-view'}, { cmd = 'DocsViewToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'Leaderf', function(cmdargs)
+          require('packer.load')({'LeaderF'}, { cmd = 'Leaderf', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'nvim-docs-view'}, { cmd = 'DocsViewToggle' }, _G.packer_plugins)
-          return vim.fn.getcompletion('DocsViewToggle ', 'cmdline')
+          require('packer.load')({'LeaderF'}, { cmd = 'Leaderf' }, _G.packer_plugins)
+          return vim.fn.getcompletion('Leaderf ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'Rename', function(cmdargs)
           require('packer.load')({'vim-eunuch'}, { cmd = 'Rename', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -1201,27 +1220,13 @@ pcall(vim.api.nvim_create_user_command, 'Rename', function(cmdargs)
           require('packer.load')({'vim-eunuch'}, { cmd = 'Rename' }, _G.packer_plugins)
           return vim.fn.getcompletion('Rename ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'OSCYankReg', function(cmdargs)
-          require('packer.load')({'vim-oscyank'}, { cmd = 'OSCYankReg', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-oscyank'}, { cmd = 'OSCYankReg' }, _G.packer_plugins)
-          return vim.fn.getcompletion('OSCYankReg ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Obsession', function(cmdargs)
-          require('packer.load')({'vim-obsession'}, { cmd = 'Obsession', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-obsession'}, { cmd = 'Obsession' }, _G.packer_plugins)
-          return vim.fn.getcompletion('Obsession ', 'cmdline')
-      end})
 time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
+vim.cmd [[nnoremap <silent> * <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "*", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> N <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "N", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> n <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "n", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[nnoremap <silent> * <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "*", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> # <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "#", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
@@ -1229,31 +1234,22 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdownfootnotes', 'vim-markdown', 'markdown-preview.nvim', 'vim-grammarous'}, { ft = "markdown" }, _G.packer_plugins)]]
-vim.cmd [[au FileType tmux ++once lua require("packer.load")({'vim-tmux'}, { ft = "tmux" }, _G.packer_plugins)]]
-vim.cmd [[au FileType toml ++once lua require("packer.load")({'vim-toml'}, { ft = "toml" }, _G.packer_plugins)]]
-vim.cmd [[au FileType qf ++once lua require("packer.load")({'nvim-bqf'}, { ft = "qf" }, _G.packer_plugins)]]
-vim.cmd [[au FileType lua ++once lua require("packer.load")({'emmylua-nvim'}, { ft = "lua" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-grammarous', 'markdown-preview.nvim', 'vim-markdown', 'vim-markdownfootnotes'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tmux ++once lua require("packer.load")({'vim-tmux'}, { ft = "tmux" }, _G.packer_plugins)]]
+vim.cmd [[au FileType qf ++once lua require("packer.load")({'nvim-bqf'}, { ft = "qf" }, _G.packer_plugins)]]
+vim.cmd [[au FileType toml ++once lua require("packer.load")({'vim-toml'}, { ft = "toml" }, _G.packer_plugins)]]
+vim.cmd [[au FileType lua ++once lua require("packer.load")({'emmylua-nvim'}, { ft = "lua" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'whitespace.nvim', 'neoscroll.nvim', 'vim-sandwich', 'vim-matchup', 'hop.nvim', 'vim-indent-object', 'vim-commentary', 'unicode.vim', 'targets.vim', 'open-browser.vim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au User InGitRepo ++once lua require("packer.load")({'vim-fugitive'}, { event = "User InGitRepo" }, _G.packer_plugins)]]
 vim.cmd [[au BufEnter * ++once lua require("packer.load")({'nvim-notify'}, { event = "BufEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'ultisnips', 'delimitMate', 'better-escape.vim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au User InGitRepo ++once lua require("packer.load")({'vim-fugitive'}, { event = "User InGitRepo" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-indent-object', 'neoscroll.nvim', 'vim-commentary', 'unicode.vim', 'hop.nvim', 'open-browser.vim', 'targets.vim', 'whitespace.nvim', 'vim-sandwich', 'vim-matchup'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'delimitMate', 'better-escape.vim', 'ultisnips'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-tmux/ftdetect/tmux.vim]], true)
-vim.cmd [[source /home/ash/.local/share/nvim/site/pack/packer/opt/vim-tmux/ftdetect/tmux.vim]]
-time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-tmux/ftdetect/tmux.vim]], false)
-time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], true)
-vim.cmd [[source /home/ash/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
-time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], false)
-time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]], true)
-vim.cmd [[source /home/ash/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]]
-time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]], false)
 time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]], true)
 vim.cmd [[source /home/ash/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]]
 time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]], false)
@@ -1263,6 +1259,15 @@ time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer
 time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], true)
 vim.cmd [[source /home/ash/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]]
 time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], false)
+time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], true)
+vim.cmd [[source /home/ash/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
+time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], false)
+time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]], true)
+vim.cmd [[source /home/ash/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]]
+time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]], false)
+time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-tmux/ftdetect/tmux.vim]], true)
+vim.cmd [[source /home/ash/.local/share/nvim/site/pack/packer/opt/vim-tmux/ftdetect/tmux.vim]]
+time([[Sourcing ftdetect script at: /home/ash/.local/share/nvim/site/pack/packer/opt/vim-tmux/ftdetect/tmux.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
