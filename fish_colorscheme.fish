@@ -1,3 +1,4 @@
+#!/bin/fish
 set -l bg 1d2021
 set -l red cc241d
 set -l green b8bb26 #98971a
