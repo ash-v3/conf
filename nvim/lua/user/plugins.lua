@@ -93,6 +93,7 @@ return packer.startup(function(use)
 		end,
 	})
 	use({ "honza/vim-snippets", after = "ultisnips" })
+	use({"KeitaNakamura/tex-conceal.vim"})
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
@@ -211,7 +212,13 @@ return packer.startup(function(use)
 	use({ "michaeljsmith/vim-indent-object", event = "VimEnter" })
 
 	-- Only use these plugin on Windows and Mac and when LaTeX is installed
-	use({ "lervag/vimtex", ft = { "tex" } })
+	use({
+		"lervag/vimtex",
+		ft = { "tex" },
+		config = function()
+			require("user.vimtex")
+		end,
+	})
 
 	-- .tmux.conf syntax highlighting and setting check
 	use({ "tmux-plugins/vim-tmux", ft = { "tmux" } })
