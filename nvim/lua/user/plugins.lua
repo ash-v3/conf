@@ -85,7 +85,13 @@ return packer.startup(function(use)
 	-- Snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
 	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
-	use({ "SirVer/ultisnips", event = "InsertEnter" })
+	use({
+		"SirVer/ultisnips",
+		event = "InsertEnter",
+		config = function()
+			require("user.ultisnips")
+		end,
+	})
 	use({ "honza/vim-snippets", after = "ultisnips" })
 
 	-- LSP
@@ -100,6 +106,10 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim" })
 	-- search emoji and other symbols
 	use({ "nvim-telescope/telescope-symbols.nvim", after = "telescope.nvim" })
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	})
 
 	-- Treesitter
 	use({
@@ -109,11 +119,16 @@ return packer.startup(function(use)
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
 
-	-- Hop
-	use({
-		"phaazon/hop.nvim",
-		event = "VimEnter",
-	})
+	-- -- Hop
+	-- use({
+	-- 	"phaazon/hop.nvim",
+	-- 	branch = "v2", -- optional but strongly recommended
+	-- 	event = "VimEnter",
+	-- 	config = function()
+	-- 		-- you can configure Hop the way you like here; see :h hop-config
+	-- 		require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+	-- 	end,
+	-- })
 
 	-- Searching
 	-- Show match number and index for searching
@@ -260,7 +275,7 @@ return packer.startup(function(use)
 	use("hrsh7th/vim-vsnip-integ")
 	use("kosayoda/nvim-lightbulb")
 	use("m-demare/hlargs.nvim")
-	use("weilbith/nvim-code-action-menu")
+	use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
 	use({
 		"saecki/crates.nvim",
 		config = function()
@@ -369,7 +384,9 @@ return packer.startup(function(use)
 		"nvim-neorg/neorg",
 		run = ":Neorg sync-parsers", -- This is the important bit!
 		config = function()
-			require("neorg").setup()
+			require("neorg").setup({ load = {
+				["core.defaults"] = {},
+			} })
 		end,
 	})
 
@@ -524,13 +541,7 @@ return packer.startup(function(use)
 		end,
 	})
 	use({
-		"jiaoshijie/undotree",
-		requires = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			require("undotree").setup()
-		end,
+		"mbbill/undotree",
 	})
 	use({
 		"itmecho/neoterm.nvim",
@@ -574,6 +585,50 @@ return packer.startup(function(use)
 	-- 		"nvim-telescope/telescope.nvim",
 	-- 	},
 	-- })
+	use({ "kdheepak/lazygit.nvim" })
+	use("sheerun/vim-polyglot")
+
+	-- use({
+	-- 	"renerocksai/telekasten.nvim",
+	-- 	config = function()
+	-- 		require("telekasten").setup()
+	-- 	end,
+	-- })
+
+	use({ "renerocksai/calendar-vim" })
+
+	use({
+		"danymat/neogen",
+		config = function()
+			require("neogen").setup({})
+		end,
+		requires = "nvim-treesitter/nvim-treesitter",
+		-- Uncomment next line if you want to follow only stable versions
+		-- tag = "*"
+	})
+	use({
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").add_default_mappings()
+		end,
+	})
+
+	use({
+		"ggandor/flit.nvim",
+		config = function()
+			require("flit").setup()
+		end,
+	})
+
+	-- use({
+	-- 	"ms-jpq/coq_nvim",
+	-- 	config = function()
+	-- 		require("user.coq")
+	-- 	end,
+	-- })
+
+	-- use({ "ms-jpq/coq.artifacts" })
+	-- use({ "ms-jpq/coq.thirdparty" })
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

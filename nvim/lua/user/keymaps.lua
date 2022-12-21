@@ -40,7 +40,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
@@ -70,26 +70,26 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Bufferline
 -- Move to previous/next
-keymap('n', '<A-,>', ':BufferPrevious<CR>', opts)
-keymap('n', '<A-.>', ':BufferNext<CR>', opts)
+keymap("n", "<A-,>", ":BufferPrevious<CR>", opts)
+keymap("n", "<A-.>", ":BufferNext<CR>", opts)
 -- Re-order to previous/next
-keymap('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
-keymap('n', '<A->>', ':BufferMoveNext<CR>', opts)
+keymap("n", "<A-<>", ":BufferMovePrevious<CR>", opts)
+keymap("n", "<A->>", ":BufferMoveNext<CR>", opts)
 -- Goto buffer in position...
-keymap('n', '<A-1>', ':BufferGoto 1<CR>', opts)
-keymap('n', '<A-2>', ':BufferGoto 2<CR>', opts)
-keymap('n', '<A-3>', ':BufferGoto 3<CR>', opts)
-keymap('n', '<A-4>', ':BufferGoto 4<CR>', opts)
-keymap('n', '<A-5>', ':BufferGoto 5<CR>', opts)
-keymap('n', '<A-6>', ':BufferGoto 6<CR>', opts)
-keymap('n', '<A-7>', ':BufferGoto 7<CR>', opts)
-keymap('n', '<A-8>', ':BufferGoto 8<CR>', opts)
-keymap('n', '<A-9>', ':BufferGoto 9<CR>', opts)
-keymap('n', '<A-0>', ':BufferLast<CR>', opts)
+keymap("n", "<A-1>", ":BufferGoto 1<CR>", opts)
+keymap("n", "<A-2>", ":BufferGoto 2<CR>", opts)
+keymap("n", "<A-3>", ":BufferGoto 3<CR>", opts)
+keymap("n", "<A-4>", ":BufferGoto 4<CR>", opts)
+keymap("n", "<A-5>", ":BufferGoto 5<CR>", opts)
+keymap("n", "<A-6>", ":BufferGoto 6<CR>", opts)
+keymap("n", "<A-7>", ":BufferGoto 7<CR>", opts)
+keymap("n", "<A-8>", ":BufferGoto 8<CR>", opts)
+keymap("n", "<A-9>", ":BufferGoto 9<CR>", opts)
+keymap("n", "<A-0>", ":BufferLast<CR>", opts)
 -- Pin/unpin buffer
-keymap('n', '<A-p>', ':BufferPin<CR>', opts)
+keymap("n", "<A-p>", ":BufferPin<CR>", opts)
 -- Close buffer
-keymap('n', '<A-c>', ':BufferClose<CR>', opts)
+keymap("n", "<A-c>", ":BufferClose<CR>", opts)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
@@ -99,12 +99,32 @@ keymap('n', '<A-c>', ':BufferClose<CR>', opts)
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
-keymap('n', '<C-p>', ':BufferPick<CR>', opts)
+keymap("n", "<C-p>", ":BufferPick<CR>", opts)
 -- Sort automatically by...
-keymap('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
-keymap('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
-keymap('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
-keymap('n', '<Space>bw', ':BufferOrderByWindowNumber<CR>', opts)
+keymap("n", "<Space>bb", ":BufferOrderByBufferNumber<CR>", opts)
+keymap("n", "<Space>bd", ":BufferOrderByDirectory<CR>", opts)
+keymap("n", "<Space>bl", ":BufferOrderByLanguage<CR>", opts)
+keymap("n", "<Space>bw", ":BufferOrderByWindowNumber<CR>", opts)
 
 -- Nvim-tree
-keymap('n', '<Leader>nt', ':NvimTreeToggle<CR>', opts)
+keymap("n", "<Leader>nt", ":NvimTreeToggle<CR>", opts)
+
+-- Commentary
+keymap("n", "<Leader>km", ":Commentary<CR>", opts)
+
+-- Undo tree
+keymap("n", "<Leader>un", ":UndotreeToggle<CR>", opts)
+
+-- Hop
+keymap("n", "<C-g>", ":HopWord<CR>", opts)
+keymap("n", "<C-g>a", ":HopAnywhere<CR>", opts)
+keymap("n", "<C-g>p", ":HopPattern<CR>", opts)
+
+-- Telescope
+keymap("n", "<C-t>", ":Telescope<CR>", opts)
+
+-- Neoformat
+keymap("n", "<Leader>st", ":Neoformat<CR>", opts)
+
+-- Code action
+vim.keymap.set("n", "<Leader>k", ":CodeActionMenu<CR>", opts)

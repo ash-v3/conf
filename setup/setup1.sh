@@ -23,7 +23,7 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
   mesa-utils neovim-lspconfig protontricks lutris nvtop \
   nvitop ascii-image-converter texlive-most pandoc neovim-web-devicons-git\
   cscope ctags xsel scrot ffmpegthumbnailer \
-  pipes-rs-git
+  pipes-rs-git evcxr_repl
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
