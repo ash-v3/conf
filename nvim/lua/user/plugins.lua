@@ -481,12 +481,12 @@ return packer.startup(function(use)
 		end,
 	})
 	use("LudoPinelli/comment-box.nvim")
-	use({
-		"edluffy/hologram.nvim",
-		config = function()
-			require("hologram").setup({ auto_display = true })
-		end,
-	})
+	-- use({
+	-- 	"edluffy/hologram.nvim",
+	-- 	config = function()
+	-- 		require("hologram").setup({ auto_display = true })
+	-- 	end,
+	-- })
 	use("ojroques/vim-scrollstatus")
 	use({
 		"beauwilliams/focus.nvim",
