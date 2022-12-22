@@ -42,7 +42,12 @@ return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim" }) -- Useful lua functions used by lots of plugins
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
-	use({ "numToStr/Comment.nvim" })
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "kyazdani42/nvim-tree.lua" })
@@ -79,21 +84,29 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-nvim-lua" })
 	use({ "hrsh7th/cmp-omni", after = "nvim-cmp" })
-	use({ "quangnguyen30192/cmp-nvim-ultisnips", after = { "nvim-cmp", "ultisnips" } })
 	use({ "hrsh7th/cmp-emoji", after = "nvim-cmp" })
 
 	-- Snippets
-	use({ "L3MON4D3/LuaSnip" }) --snippet engine
-	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
 	use({
-		"SirVer/ultisnips",
-		event = "InsertEnter",
-		config = function()
-			require("user.ultisnips")
-		end,
+		"hrsh7th/vim-vsnip",
 	})
-	use({ "honza/vim-snippets", after = "ultisnips" })
-	use({"KeitaNakamura/tex-conceal.vim"})
+	use({ "hrsh7th/vim-vsnip-integ" })
+	-- use({
+	-- 	"L3MON4D3/LuaSnip",
+	-- 	config = function()
+	-- 		require("user.luasnip")
+	-- 	end,
+	-- }) --snippet engine
+	-- use({
+	-- 	"SirVer/ultisnips",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("user.ultisnips")
+	-- 	end,
+	-- })
+	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
+	use({ "honza/vim-snippets" })
+	use({ "KeitaNakamura/tex-conceal.vim" })
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
@@ -215,9 +228,6 @@ return packer.startup(function(use)
 	use({
 		"lervag/vimtex",
 		ft = { "tex" },
-		config = function()
-			require("user.vimtex")
-		end,
 	})
 
 	-- .tmux.conf syntax highlighting and setting check
@@ -278,8 +288,6 @@ return packer.startup(function(use)
 	})
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
 	use("hrsh7th/cmp-vsnip")
-	use("hrsh7th/vim-vsnip")
-	use("hrsh7th/vim-vsnip-integ")
 	use("kosayoda/nvim-lightbulb")
 	use("m-demare/hlargs.nvim")
 	use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
@@ -289,13 +297,13 @@ return packer.startup(function(use)
 			require("user.crates")
 		end,
 	})
-	use({
-		"neoclide/coc.nvim",
-		branch = "release",
-		config = function()
-			require("user.coc")
-		end,
-	})
+	-- use({
+	-- 	"neoclide/coc.nvim",
+	-- 	branch = "release",
+	-- 	config = function()
+	-- 		require("user.coc")
+	-- 	end,
+	-- })
 	use({
 		"akinsho/git-conflict.nvim",
 		config = function()
@@ -627,15 +635,17 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- use({
-	-- 	"ms-jpq/coq_nvim",
-	-- 	config = function()
-	-- 		require("user.coq")
-	-- 	end,
-	-- })
+	use({
+		"ms-jpq/coq_nvim",
+		config = function()
+			require("user.coq")
+		end,
+	})
 
-	-- use({ "ms-jpq/coq.artifacts" })
-	-- use({ "ms-jpq/coq.thirdparty" })
+	use({ "ms-jpq/coq.artifacts" })
+	use({ "ms-jpq/coq.thirdparty" })
+
+	-- use({"ms-jpq/chadtree", branch = "chad", run = "python3 -m chadtree deps"})
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

@@ -109,9 +109,6 @@ keymap("n", "<Space>bw", ":BufferOrderByWindowNumber<CR>", opts)
 -- Nvim-tree
 keymap("n", "<Leader>nt", ":NvimTreeToggle<CR>", opts)
 
--- Commentary
-keymap("n", "<Leader>km", ":Commentary<CR>", opts)
-
 -- Undo tree
 keymap("n", "<Leader>un", ":UndotreeToggle<CR>", opts)
 
