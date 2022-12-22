@@ -4,7 +4,6 @@ local configs = {
 	"telescope",
 	"gitsigns",
 	"treesitter",
-	"autopairs",
 	"comment",
 	"nvim-tree",
 	"bufferline",

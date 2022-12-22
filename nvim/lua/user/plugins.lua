@@ -41,7 +41,6 @@ packer.init({
 return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim" }) -- Useful lua functions used by lots of plugins
-	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
 	use({
 		"numToStr/Comment.nvim",
 		config = function()
@@ -85,6 +84,9 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-nvim-lua" })
 	use({ "hrsh7th/cmp-omni", after = "nvim-cmp" })
 	use({ "hrsh7th/cmp-emoji", after = "nvim-cmp" })
+
+	-- use({"tpope/vim-endwise"})
+	-- use({"rstacruz/vim-closer"})
 
 	-- Snippets
 	use({
@@ -304,6 +306,21 @@ return packer.startup(function(use)
 	-- 		require("user.coc")
 	-- 	end,
 	-- })
+	use({
+		"ms-jpq/coq_nvim",
+		config = function()
+			require("user.coq_nvim")
+		end,
+	})
+
+	use({ "ms-jpq/coq.artifacts" })
+	use({ "ms-jpq/coq.thirdparty" })
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("user.autopairs")
+		end,
+	}) -- Autopairs, integrates with both cmp and treesitter
 	use({
 		"akinsho/git-conflict.nvim",
 		config = function()
@@ -634,16 +651,6 @@ return packer.startup(function(use)
 			require("flit").setup()
 		end,
 	})
-
-	use({
-		"ms-jpq/coq_nvim",
-		config = function()
-			require("user.coq")
-		end,
-	})
-
-	use({ "ms-jpq/coq.artifacts" })
-	use({ "ms-jpq/coq.thirdparty" })
 
 	-- use({"ms-jpq/chadtree", branch = "chad", run = "python3 -m chadtree deps"})
 

@@ -7,6 +7,4 @@
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.reborrowHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
-  "rust-analyzer.completion.autoself.enable": true,
-  "rust-analyzer.hover.documentation.enable": true,
 }
