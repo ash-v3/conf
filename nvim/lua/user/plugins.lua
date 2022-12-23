@@ -85,8 +85,8 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-omni", after = "nvim-cmp" })
 	use({ "hrsh7th/cmp-emoji", after = "nvim-cmp" })
 
-	-- use({"tpope/vim-endwise"})
-	-- use({"rstacruz/vim-closer"})
+	use({ "tpope/vim-endwise" })
+	use({ "rstacruz/vim-closer" })
 
 	-- Snippets
 	use({
@@ -95,16 +95,10 @@ return packer.startup(function(use)
 	use({ "hrsh7th/vim-vsnip-integ" })
 	-- use({
 	-- 	"L3MON4D3/LuaSnip",
-	-- 	config = function()
-	-- 		require("user.luasnip")
-	-- 	end,
-	-- }) --snippet engine
+	-- })
 	-- use({
 	-- 	"SirVer/ultisnips",
 	-- 	event = "InsertEnter",
-	-- 	config = function()
-	-- 		require("user.ultisnips")
-	-- 	end,
 	-- })
 	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
 	use({ "honza/vim-snippets" })
@@ -135,16 +129,16 @@ return packer.startup(function(use)
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
 
-	-- -- Hop
-	-- use({
-	-- 	"phaazon/hop.nvim",
-	-- 	branch = "v2", -- optional but strongly recommended
-	-- 	event = "VimEnter",
-	-- 	config = function()
-	-- 		-- you can configure Hop the way you like here; see :h hop-config
-	-- 		require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
-	-- 	end,
-	-- })
+	-- Hop
+	use({
+		"phaazon/hop.nvim",
+		branch = "v2", -- optional but strongly recommended
+		event = "VimEnter",
+		config = function()
+			-- you can configure Hop the way you like here; see :h hop-config
+			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+		end,
+	})
 
 	-- Searching
 	-- Show match number and index for searching
@@ -299,28 +293,37 @@ return packer.startup(function(use)
 			require("user.crates")
 		end,
 	})
-	-- use({
-	-- 	"neoclide/coc.nvim",
-	-- 	branch = "release",
-	-- 	config = function()
-	-- 		require("user.coc")
-	-- 	end,
-	-- })
 	use({
-		"ms-jpq/coq_nvim",
+		"neoclide/coc.nvim",
+		branch = "release",
 		config = function()
-			require("user.coq_nvim")
+			require("user.coc")
 		end,
 	})
-
-	use({ "ms-jpq/coq.artifacts" })
-	use({ "ms-jpq/coq.thirdparty" })
+	-- use({
+	-- 	"ms-jpq/coq_nvim",
+	-- 	config = function()
+	-- 		require("user.coq_nvim")
+	-- 	end,
+	-- })
+	--
+	-- use({ "ms-jpq/coq.artifacts" })
+	-- use({ "ms-jpq/coq.thirdparty" })
+	-- Auto pairs
 	use({
 		"windwp/nvim-autopairs",
 		config = function()
 			require("user.autopairs")
 		end,
-	}) -- Autopairs, integrates with both cmp and treesitter
+	})
+	use({
+		"windwp/nvim-ts-autotag",
+		wants = "nvim-treesitter",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-ts-autotag").setup({ enable = true })
+		end,
+	})
 	use({
 		"akinsho/git-conflict.nvim",
 		config = function()
@@ -540,12 +543,12 @@ return packer.startup(function(use)
 			require("neoclip").setup()
 		end,
 	})
-	use({
-		"abecodes/tabout.nvim",
-		config = function()
-			require("tabout").setup()
-		end,
-	})
+	-- use({
+	-- 	"abecodes/tabout.nvim",
+	-- 	config = function()
+	-- 		require("tabout").setup()
+	-- 	end,
+	-- })
 	use("rust-lang/rust.vim")
 	use({
 		"amrbashir/nvim-docs-view",
@@ -652,8 +655,14 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- use({"ms-jpq/chadtree", branch = "chad", run = "python3 -m chadtree deps"})
+	use({ "ms-jpq/chadtree", branch = "chad", run = "python3 -m chadtree deps" })
 
+	-- use({
+	-- 	"Shougo/echodoc.vim",
+	-- 	config = function()
+	-- 		require("user.echodoc")
+	-- 	end,
+	-- })
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

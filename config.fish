@@ -4,4 +4,5 @@ if status is-interactive
     # bind -f common q shell tmux detach-client -s cmus
 
     set -Ux RUST_BACKTRACE 1
+    set -Ux RUSTC_WRAPPER sccache
 end

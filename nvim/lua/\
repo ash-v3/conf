@@ -121,8 +121,4 @@ keymap("n", "<C-t>", ":Telescope<CR>", opts)
 keymap("n", "<Leader>st", ":Neoformat<CR>", opts)
 
 -- Code action
-keymap("n", "<Leader>k", ":CodeActionMenu<CR>", opts)
-
--- Cargo
-keymap("n", "<Leader>rr", ":!cargo run<CR>", opts)
-keymap("n", "<Leader>rt", ":!cargo test<CR>", opts)
+vim.keymap.set("n", "<Leader>k", ":CodeActionMenu<CR>", opts)

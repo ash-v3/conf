@@ -17,7 +17,7 @@ local function on_attach(client, buffer)
 	-- Code action groups
 	vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = buffer })
 
-	vim.keymap.set("n", "<Leader>ar", rt.runnables.runnables, { buffer = buffer })
+	-- vim.keymap.set("n", "<Leader>ar", rt.runnables.runnables, { buffer = buffer })
 end
 
 local opts = {
