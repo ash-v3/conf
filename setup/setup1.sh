@@ -1,13 +1,13 @@
 #!/bin/fish
 
-paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
+paru -Syyu neovim-git brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
 	nerd-fonts-complete noto-fonts-emoji kitty fish lsd \
 	github-cli discord bacon bat blanket \
 	blender bottom broot codelldb-bin cointop \
 	cudnn duf dust eslint fd \
 	fish fzf gimp git-delta gitoxide \
 	gnuplot gping heroic-games-launcher hexyl hyperfine \
-	jdk libreoffice lua-language-server lux-dl melody \
+	jdk libreoffice lua-language-server melody \
 	onefetch p7zip pastel procs python \
 	python-pip rate-mirrors ripgrep rust-analyzer \
 	rustdesk-bin rustscan sc-im sd sherlock \
