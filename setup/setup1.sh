@@ -30,7 +30,7 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
 	xorg-xbacklight xf86-input-synaptics cheese workrave alsa-utils \
 	network-manager-applet pcmanfm gvfs udiskie xarchiver \
 	mc polkit mpd mpc ncmpcpp \
-	xfmpc xclip xsel clipmenu
+	xfmpc xclip xsel clipmenu dxvk-bin
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
