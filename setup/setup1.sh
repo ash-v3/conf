@@ -1,6 +1,6 @@
 #!/bin/fish
 
-paru -Syyu neovim-git brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
+paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
 	nerd-fonts-complete noto-fonts-emoji kitty fish lsd \
 	github-cli discord bacon bat blanket \
 	blender bottom broot codelldb-bin cointop \
@@ -15,7 +15,7 @@ paru -Syyu neovim-git brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
 	python-lsp-server wine-ge-custom winetricks lib32-nvidia-utils dkms \
 	acpi acpid alsa-utils android-file-transfer arandr \
 	brightnessctl calibre cmus dhcpcd dtrx \
-	evince feh qeh gitui gparted \
+	feh qeh gitui gparted \
 	icat ipython nftables nmap atlauncher \
 	pavucontrol perf picom popsicle ranger \
 	rm-improved stress stress-ng tmux tor \
@@ -30,11 +30,17 @@ paru -Syyu neovim-git brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
 	xorg-xbacklight xf86-input-synaptics cheese workrave alsa-utils \
 	network-manager-applet pcmanfm gvfs udiskie xarchiver \
 	mc polkit mpd mpc ncmpcpp \
-	xfmpc xclip xsel clipmenu dxvk-bin
+	xfmpc xclip xsel clipmenu dxvk-bin \
+    lazygit llvm testdisk qt5 qt5-styleplugins \
+    lxappearance zathura zathura-pdf-mupdf btop rua
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
 cargo install thebook
+cargo install grcov
+cargo install cargo-llvm-cov
+
+rustup component add llvm-tools-preview
 
 sudo npm i -g pyright
 sudo npm i -g neovim
