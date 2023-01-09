@@ -79,9 +79,9 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
+    awful.layout.suit.floating,
     bling.layout.equalarea,
     awful.layout.suit.max,
-    awful.layout.suit.floating,
     -- awful.layout.suit.floating,
     -- awful.layout.suit.tile,
     -- awful.layout.suit.tile.left,
@@ -679,4 +679,6 @@ end)
 awful.util.spawn("picom -b")
 
 awful.util.spawn("sudo sh ~/.config/awesome/autorun.sh")
+
+awful.util.spawn("nm-applet")
 -- }}}

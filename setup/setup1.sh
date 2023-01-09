@@ -1,6 +1,6 @@
 #!/bin/fish
 
-paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
+paru -Syyu neovim firefox xclip arc-icon-theme ttf-jetbrains-mono \
 	nerd-fonts-complete noto-fonts-emoji kitty fish lsd \
 	github-cli discord bacon bat blanket \
 	blender bottom broot codelldb-bin cointop \
@@ -31,8 +31,9 @@ paru -Syyu neovim brave-bin xclip arc-icon-theme ttf-jetbrains-mono \
 	network-manager-applet pcmanfm gvfs udiskie xarchiver \
 	mc polkit mpd mpc ncmpcpp \
 	xfmpc xclip xsel clipmenu dxvk-bin \
-    lazygit llvm testdisk qt5 qt5-styleplugins \
-    lxappearance zathura zathura-pdf-mupdf btop rua
+	lazygit llvm testdisk qt5 qt5-styleplugins \
+	lxappearance zathura zathura-pdf-mupdf btop rua \
+	nm-connection-editor capnet-assist thunderbird
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 
