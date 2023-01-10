@@ -34,8 +34,7 @@ if awesome.startup_errors then
         preset = naughty.config.presets.critical,
         title = "Oops, there were errors during startup!",
         text = awesome.startup_errors,
-    })
-end
+    }) end
 
 -- Handle runtime errors after startup
 do
@@ -79,8 +78,8 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.floating,
     bling.layout.equalarea,
+    awful.layout.suit.floating,
     awful.layout.suit.max,
     -- awful.layout.suit.floating,
     -- awful.layout.suit.tile,
