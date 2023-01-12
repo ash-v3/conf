@@ -34,7 +34,7 @@ paru -Syyu neovim firefox xclip arc-icon-theme ttf-jetbrains-mono \
 	lazygit llvm testdisk qt5 qt5-styleplugins \
 	lxappearance zathura zathura-pdf-mupdf btop rua \
 	nm-connection-editor capnet-assist thunderbird xdg-user-dirs ueberzug \
-    figlet
+    figlet choose tldr xh
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 

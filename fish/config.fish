@@ -13,4 +13,5 @@ if status is-interactive
     --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"    
     set -Ux WINEARCH win64
     set -Ux WINEPREFIX ~/.wine
+    zoxide init fish | source
 end

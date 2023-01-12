@@ -112,8 +112,8 @@ vim.keymap.set("t", "<C-l>", "<C-\\><C-N><C-w>l", opts)
 
 -- Bufferline
 -- Move to previous/next
-vim.keymap.set("n", "<S-l>", ":BufferPrevious<CR>", opts)
-vim.keymap.set("n", "<S-h>", ":BufferNext<CR>", opts)
+vim.keymap.set("n", "<S-l>", ":BufferNext<CR>", opts)
+vim.keymap.set("n", "<S-h>", ":BufferPrevious<CR>", opts)
 -- Re-order to previous/next
 vim.keymap.set("n", "<A-<>", ":BufferMovePrevious<CR>", opts)
 vim.keymap.set("n", "<A->>", ":BufferMoveNext<CR>", opts)
@@ -168,7 +168,7 @@ vim.keymap.set("n", "<Leader>tc", ":Telescope commands<CR>", opts)
 vim.keymap.set("n", "<Leader>tr", ":Telescope resume<CR>", opts)
 vim.keymap.set("n", "<Leader>ts", ":Telescope symbols<CR>", opts)
 vim.keymap.set("n", "<Leader>te", ":Telescope file_browser<CR>", opts)
-vim.keymap.set("n", "<Leader>te", ":Telescope repo<CR>", opts)
+vim.keymap.set("n", "<Leader>tp", ":Telescope repo<CR>", opts)
 vim.keymap.set("n", "<Leader>tj", ":Telescope git_status<CR>", opts)
 vim.keymap.set("n", "<Leader>tk", ":Telescope keymaps<CR>", opts)
 vim.keymap.set("n", "<Leader>tu", ":Telescope undo<CR>", opts)
