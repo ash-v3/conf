@@ -1,2 +1,1 @@
-sudo mount /dev/sda1 /mnt/sda1
-sudo mount /dev/sdb1 /mnt/sdb1
+ssh -f -N -D 0.0.0.0:1080 localhost

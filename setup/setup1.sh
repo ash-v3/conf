@@ -33,7 +33,8 @@ paru -Syyu neovim firefox xclip arc-icon-theme ttf-jetbrains-mono \
 	xfmpc xclip xsel clipmenu dxvk-bin \
 	lazygit llvm testdisk qt5 qt5-styleplugins \
 	lxappearance zathura zathura-pdf-mupdf btop rua \
-	nm-connection-editor capnet-assist thunderbird xdg-user-dirs
+	nm-connection-editor capnet-assist thunderbird xdg-user-dirs ueberzug \
+    figlet
 
 pip install pynvim sympy tensorflow transformers matplotlib gym pandas rl
 

@@ -34,7 +34,8 @@ if awesome.startup_errors then
         preset = naughty.config.presets.critical,
         title = "Oops, there were errors during startup!",
         text = awesome.startup_errors,
-    }) end
+    })
+end
 
 -- Handle runtime errors after startup
 do
@@ -548,6 +549,17 @@ clientbuttons = gears.table.join(
 root.keys(globalkeys)
 -- }}}
 
+local function focus_filter(c)
+    if c.type == "desktop"
+        or c.type == "dock"
+        or c.type == "splash"
+        or c.class == "UnrealEditor"
+        or not c.focusable then
+        return nil
+    end
+    return c
+end
+
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
@@ -557,7 +569,7 @@ awful.rules.rules = {
         properties = {
             border_width = beautiful.border_width,
             border_color = beautiful.border_normal,
-            focus = awful.client.focus.filter,
+            focus = focus_filter, -- awful.client.focus.filter,
             raise = true,
             keys = clientkeys,
             buttons = clientbuttons,
